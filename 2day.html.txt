@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>SIMATS</title>
+</head>
+<body>
+<form method="post" action="login"></br>
+Username <input type="text" name="un"></br>
+Password <input type="password" name="p"></br>
+<input type="submit" value="click"></br>
+<a href="Registration.html">new registration</a>
+</form>
+</body>
+</html>
+
+
+<form method="post" action="Registration"></br>
+Enter your roll number <input type="text" name="rn"></br>
+Enter your name <input type="password" name="n"></br>
+Enter your Department  <input type="text" name="d"></br>
+Enter your password <input type="password" name="pw"></br>
+<input type="submit" value="click"></br>
+
+
+
+import java.sql.*;
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.ServletException;
+import javax.servlet.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+public class Registration extends HttpServlet{
+protect void processRequest(HttpServletRequest request,HttpServletResponse response)throws IOException, ServletException{
+response.setContentType(" text/html");
+printWriter pw=response.getWriter();
+string rno=pw.getParameter("rn");
+string na=pw.getParameter("n");
+string de=pw.getParameter("d");
+string pw=pw.getParameter("pw");
+Class.forName("com.mysql.jdbc.Driver");
+Connection c=DriverManager.getConncetion("","","")
+PreparedStatement ps = prepareStatement(INSERT INTO std values("rno","na","d","pw"));
+ps.setString(1,"rno");
+ps.setString(2,"na");
+ps.setString(3,"d");
+ps.setString(4,"pw");
+ps.setString(1,"rno");
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
